@@ -1,5 +1,4 @@
-import joblib
-
+from sklearn.externals import joblib
 
 def predict(data):
     clf = joblib.load("rf_model.sav")
