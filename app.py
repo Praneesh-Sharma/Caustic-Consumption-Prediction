@@ -17,7 +17,7 @@ def user_input():
     ltu = st.slider('LTU Feed Rate', 0.0, 150.0,  50.0)
     data = { 'ISOM': isom,
              'NFCCU': nfccu,
-             'ofccu': ofccu,
+             'OFCCU': ofccu,
              'LTU': ltu}
     features = pd.DataFrame(data, index=[0])
     return features
