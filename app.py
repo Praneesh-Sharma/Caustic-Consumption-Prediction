@@ -30,7 +30,7 @@ st.write(df)
 st.write('---')
 
 #model
-prediction = predict(df.to_numpy())
+prediction = predict(df.to_numpy()[0])
 
 st.write("###### Predicted House Price Value based on the given parameters: ")
 st.code(float(prediction))
