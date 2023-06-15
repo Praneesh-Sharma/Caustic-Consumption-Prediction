@@ -2,5 +2,5 @@ import joblib
 
 
 def predict(data):
-    clf = joblib.load("consump_pred.pkl")
+    clf = joblib.load("rf_model.sav")
     return clf.predict(data)
