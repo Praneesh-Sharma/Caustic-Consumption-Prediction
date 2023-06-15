@@ -1,6 +1,6 @@
-import joblib
+import pickle
 
 
 def predict(data):
-    clf = joblib.load("consump_pred.pkl")
+    clf = pickle.load("consump_pred.pkl")
     return clf.predict(data)
