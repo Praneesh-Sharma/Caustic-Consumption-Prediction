@@ -21,6 +21,7 @@ with col2:
     ofccu = st.slider('OFCCU Feed Rate', 0.0, 200.0,  50.0)
     ltu = st.slider('LTU Feed Rate', 0.0, 150.0,  50.0)
 
-st.write("###### Predicted House Price Value based on the given parameters: ")
+st.text('')
+st.write("#### Consumption: ")
 result = predict(np.array([[isom, nfccu, ofccu, ltu]]))
 st.text(result[0])
