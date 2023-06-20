@@ -11,8 +11,6 @@ st.title('Caustic Conusmption Prediction')
 st.markdown("<h2 style='text-align: left; color: black;'>Model Parameters</h2>", unsafe_allow_html=True)
 st.write("###### Specify Input Parameters: ")
 
-st.header("Feed Rates:")
-
 nfccu = st.slider('NFCCU Feed Rate', 0.0, 250.0, 150.0)
 ofccu = st.slider('OFCCU Feed Rate', 0.0, 200.0,  50.0)
 ltu = st.slider('LTU Feed Rate', 0.0, 150.0,  50.0)  
