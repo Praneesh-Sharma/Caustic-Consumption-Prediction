@@ -21,8 +21,10 @@ result = predict(np.array([[nfccu, ofccu, ltu]]))
 isom_chk = st.checkbox('Include ISOM Feed Rate')
 if isom_chk:
     isom = st.number_input('Enter ISOM Consumption: ')
+    st.write('---')
     st.text("Predicted output:")
     st.code(result[0]+isom)
 else:
+    st.write('---')
     st.text("Predicted output:")
     st.code(result[0])    
