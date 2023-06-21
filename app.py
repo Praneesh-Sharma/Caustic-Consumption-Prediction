@@ -13,7 +13,7 @@ nfccu = st.slider('NFCCU Feed Rate', 0.0, 220.0, 80.0)
 ofccu = st.slider('OFCCU Feed Rate', 0.0, 120.0,  80.0)
 ltu = st.slider('LTU Feed Rate', 0.0, 110.0,  80.0)  
 
-if nfccu>80 and ofccu>80 and ltu>80:
+if nfccu>=80 and ofccu>=80 and ltu>=80:
     result = predict(np.array([[nfccu, ofccu, ltu]]))
     isom_chk = st.checkbox('Include ISOM consumption')
     if isom_chk:
