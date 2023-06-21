@@ -20,7 +20,7 @@ if nfccu>80 and ofccu>80 and ltu>80:
         isom = st.number_input('Enter ISOM Consumption: ')
         st.write('---')
         st.text("Predicted output in m3:")
-        st.code(3.14*(result[0]+isom)*0.01*250*250)
+        st.code(3.14*(result[0]+isom)*0.01*2.50*2.50)
     else:
         st.write('---')
         st.text("Predicted output in m3:")
