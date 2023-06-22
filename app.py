@@ -19,12 +19,12 @@ if nfccu>=80 and ofccu>=80 and ltu>=80:
     if isom_chk:
         isom = st.number_input('Enter ISOM Consumption: ')
         st.write('---')
-        st.text("Predicted output in m3:")
-        st.code(3.14*(result[0]+isom)*0.01*2.50*2.50)
+        st.text("Predicted output in tonne:")
+        st.code(3.14*(result[0]+isom)*0.01*2.50*2.50*1.495)
     else:
         st.write('---')
-        st.text("Predicted output in m3:")
-        st.code(3.14*(result[0])*0.01*2.50*2.50) 
+        st.text("Predicted output in tonne:")
+        st.code(3.14*(result[0])*0.01*2.50*2.50*1.495) 
 else:
     st.write('---')
     st.text("Start-up Phase")
