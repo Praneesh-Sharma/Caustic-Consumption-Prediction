@@ -2,7 +2,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import math
 from prediction import predict
 
 st.title('Caustic Consumption Prediction')
@@ -31,24 +30,22 @@ if nfccu>=80 and ofccu>=80 and ltu>=80:
     else:
         # st.code(3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25)
         ans = 3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25
-
-    ans = math.ceil(ans*100)/100 
     
     if option=='Daily':
         st.text("Predicted output in tonne(Daily):")
         st.code(round(ans/7,2))
     elif option=='Weekly':
         st.text("Predicted output in tonne(Weekly):")
-        st.code(ans)
+        st.code(round(ans,2))
     elif option=='Fortnightly':
         st.text("Predicted output in tonne(Fortnightly):")
-        st.code(ans*15/7)
+        st.code(round(ans*15/7,2))
     elif option=='Monthly':
         st.text("Predicted output in tonne(Monthly):")
-        st.code(ans*30/7)
+        st.code(round(ans*30/7,2))
     elif option=='Quarterly':
         st.text("Predicted output in tonne(Quarterly):")
-        st.code(ans*12)
+        st.code(round(ans*12,2))
 else:
     st.text("Start-up Phase")
 
