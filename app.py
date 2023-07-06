@@ -18,20 +18,35 @@ option = st.selectbox(
     ('Daily', 'Weekly', 'Fortnightly', 'Monthly', 'Quarterly'),
     label_visibility="hidden")
 
+st.write('---')
+
 if nfccu>=80 and ofccu>=80 and ltu>=80:
     # result = predict(np.array([[nfccu, ofccu, ltu]]))
     isom_chk = st.checkbox('Include ISOM consumption')
     if isom_chk:
         isom = st.number_input('Enter ISOM Consumption: ')
-        st.write('---')
-        st.text("Predicted output in tonne(weekly):")
         # st.code(3.14*(result[0]+isom)*0.01*2.50*2.50*1.495*1.4*1.25)
+        ans = 3.14*(result[0]+isom)*0.01*2.50*2.50*1.495*1.4*1.25
     else:
-        st.write('---')
-        st.text("Predicted output in tonne(weekly):")
-        # st.code(3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25) 
+        # st.code(3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25)
+        ans = 3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25
+
+    if option=='Daily':
+        st.text("Predicted output in tonne(Daily):")
+        st.code(ans/7)
+    elif option=='Weekly':
+        st.text("Predicted output in tonne(Weekly):")
+        st.code(ans)
+    elif option=='Fortnightly':
+        st.text("Predicted output in tonne(Fortnightly):")
+        st.code(ans*15/7)
+    elif option=='Monthly':
+        st.text("Predicted output in tonne(Monthly):")
+        st.code(ans*30/7)
+    elif option=='Quarterly':
+        st.text("Predicted output in tonne(Quarterly):")
+        st.code(ans*12)
 else:
-    st.write('---')
     st.text("Start-up Phase")
 
    
