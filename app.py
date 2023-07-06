@@ -31,6 +31,8 @@ if nfccu>=80 and ofccu>=80 and ltu>=80:
         # st.code(3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25)
         ans = 3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25
 
+    ans = round(ans,2)
+    
     if option=='Daily':
         st.text("Predicted output in tonne(Daily):")
         st.code(ans/7)
