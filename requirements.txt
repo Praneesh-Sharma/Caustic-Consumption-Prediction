@@ -3,4 +3,3 @@ joblib
 streamlit
 scikit-learn
 pandas
-pickle
