@@ -36,7 +36,7 @@ if nfccu>=80 and ofccu>=80 and ltu>=80:
     
     if option=='Daily':
         st.text("Predicted output in tonne(Daily):")
-        st.code(round(ans/7,2)
+        st.code(round(ans/7,2))
     elif option=='Weekly':
         st.text("Predicted output in tonne(Weekly):")
         st.code(ans)
