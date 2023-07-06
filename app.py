@@ -16,7 +16,7 @@ ltu = st.slider('LTU Feed Rate', 0.0, 110.0,  80.0)
 option = st.selectbox(
     'Select time period',
     ('Daily', 'Weekly', 'Fortnightly', 'Monthly', 'Quarterly'),
-    label_visibility=hidden)
+    label_visibility="hidden")
 
 if nfccu>=80 and ofccu>=80 and ltu>=80:
     result = predict(np.array([[nfccu, ofccu, ltu]]))
