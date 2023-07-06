@@ -19,7 +19,7 @@ option = st.selectbox(
     label_visibility="hidden")
 
 if nfccu>=80 and ofccu>=80 and ltu>=80:
-    # result = predict(np.array([[nfccu, ofccu, ltu]]))
+    result = predict(np.array([[nfccu, ofccu, ltu]]))
     isom_chk = st.checkbox('Include ISOM consumption')
     if isom_chk:
         isom = st.number_input('Enter ISOM Consumption: ')
