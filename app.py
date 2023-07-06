@@ -2,7 +2,17 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from prediction import predict
+import pickle
+# from prediction import predict
+
+# loading in the model to predict on the data
+pickle_in = open('consump_pred_v2.pkl', 'rb')
+classifier = pickle.load(pickle_in)
+
+def prediction(data):  
+    prediction = classifier.predict(data)
+    print(prediction)
+    return prediction
 
 st.title('Caustic Consumption Prediction')
 
@@ -21,7 +31,7 @@ option = st.selectbox(
 st.write('---')
 
 if nfccu>=80 and ofccu>=80 and ltu>=80:
-    result = predict(np.array([[nfccu, ofccu, ltu]]))
+    result = prediction(np.array([[nfccu, ofccu, ltu]]))
     isom_chk = st.checkbox('Include ISOM consumption')
     if isom_chk:
         isom = st.number_input('Enter ISOM Consumption: ')
