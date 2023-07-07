@@ -20,7 +20,7 @@ option = st.selectbox(
     ('Daily', 'Weekly', 'Fortnightly', 'Monthly', 'Quarterly'))
     # label_visibility="hidden")
 
-st.write('---')
+# st.write('---')
 
 if nfccu>=80 and ofccu>=80 and ltu>=80:
     result = predict(np.array([[nfccu, ofccu, ltu]]))
