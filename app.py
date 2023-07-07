@@ -9,9 +9,9 @@ st.title('Caustic Consumption Prediction')
 #User input for model parameters
 st.markdown("<h3 style='text-align: left; color: black;'>Model Parameters</h3>", unsafe_allow_html=True)
 
-nfccu = st.slider('NFCCU Feed Rate', 0.0, 220.0, 80.0)
-ofccu = st.slider('OFCCU Feed Rate', 0.0, 120.0,  80.0)
-ltu = st.slider('LTU Feed Rate', 0.0, 110.0,  80.0)
+nfccu = st.slider('NFCCU Feed Rate', 70.0, 220.0, 80.0)
+ofccu = st.slider('OFCCU Feed Rate', 70.0, 120.0,  80.0)
+ltu = st.slider('LTU Feed Rate', 70.0, 110.0,  80.0)
 
 st.write('---')
 
