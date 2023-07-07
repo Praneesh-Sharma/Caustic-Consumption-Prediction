@@ -11,7 +11,9 @@ st.markdown("<h3 style='text-align: left; color: black;'>Model Parameters</h3>",
 
 nfccu = st.slider('NFCCU Feed Rate', 0.0, 220.0, 80.0)
 ofccu = st.slider('OFCCU Feed Rate', 0.0, 120.0,  80.0)
-ltu = st.slider('LTU Feed Rate', 0.0, 110.0,  80.0)  
+ltu = st.slider('LTU Feed Rate', 0.0, 110.0,  80.0)
+
+st.write('---')
 
 option = st.selectbox(
     'Time period',
@@ -30,6 +32,8 @@ if nfccu>=80 and ofccu>=80 and ltu>=80:
     else:
         # st.code(3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25)
         ans = 3.14*(result[0])*0.01*2.50*2.50*1.495*1.4*1.25
+
+    st.write('---')
     
     if option=='Daily':
         st.text("Predicted output in tonne(Daily):")
