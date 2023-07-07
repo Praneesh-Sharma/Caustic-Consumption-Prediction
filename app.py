@@ -14,9 +14,9 @@ ofccu = st.slider('OFCCU Feed Rate', 0.0, 120.0,  80.0)
 ltu = st.slider('LTU Feed Rate', 0.0, 110.0,  80.0)  
 
 option = st.selectbox(
-    'Select time period',
-    ('Daily', 'Weekly', 'Fortnightly', 'Monthly', 'Quarterly'),
-    label_visibility="hidden")
+    'Time period',
+    ('Daily', 'Weekly', 'Fortnightly', 'Monthly', 'Quarterly'))
+    # label_visibility="hidden")
 
 st.write('---')
 
